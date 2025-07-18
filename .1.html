@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INDUST RY Search</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      background: url('https://i.pinimg.com/736x/36/ee/d8/36eed8e0ac97e517b8fed0b5321d7b84.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 48px;
+      font-weight: 800;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px #000;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+
+    .search-box {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-width: 600px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 18px 24px;
+      font-size: 18px;
+      border-radius: 30px 0 0 30px;
+      border: none;
+      outline: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .search-box button {
+      padding: 18px 24px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0 30px 30px 0;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+    }
+
+    .search-box button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-box input,
+      .search-box button {
+        width: 100%;
+        border-radius: 30px;
+        margin: 5px 0;
+      }
+
+      .search-box button {
+        border-radius: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="logo">INDUST </h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search here..." />
+    <button onclick="search()"> SEARCH </button>
+    <link rel="https://www.google.com">
+    <link rel="https:microsft.com">
+    <link rel="https:youtube.com">
+  </div>
+
+  <script>
+    function search() {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query !== "") {
+        window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+      } else {
+        alert("Please type something to search.");
+      }
+    }
+  </script>
+
+</body>
+</html>
